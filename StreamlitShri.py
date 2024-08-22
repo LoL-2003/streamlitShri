@@ -333,151 +333,137 @@
 
 
 import streamlit as st
-import streamlit.components.v1 as components
 
-def header_footer():
-    st.markdown("""
-    <style>
-        .navbar-dark .navbar-nav .nav-link {
-            color: black !important;
-        }
-        .navbar-dark .navbar-brand img {
-            width: 150px;
-            height: 60px;
-        }
-        .stApp {
-            background: transparent !important;
-        }
-    </style>
-    """, unsafe_allow_html=True)
+# Set page configuration
+st.set_page_config(
+    page_title="Particles Background Example",
+    page_icon="✨",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
 
-    hide_st_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    footer:after {content:'Made with ❤️ by ADITYA PURI';visibility: visible;display: block;}
-    header {visibility: hidden;}
-    </style>
-    """
-    st.markdown(hide_st_style, unsafe_allow_html=True)
-
-st.set_page_config(page_title="ADITYA")
-header_footer()
-
-st.title("Streamlit with Neural Network Style Animation")
-
-# Neural Network Animation as Background
-neural_network_animation = """
+# Inject CSS and JS for particles.js background
+particles_js = """
+<!-- particles.js container -->
 <div id="particles-js"></div>
-<style>
-  #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: #000;
-  }
-  .stApp {
-    position: relative;
-    z-index: 1;
-  }
-</style>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- particles.js lib - https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- particles.js config -->
 <script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#FABC3F"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false
-      },
-      "size": {
-        "value": 3,
-        "random": true
-      },
-      "line_linked": {
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
         "enable": true,
-        "distance": 150,
-        "color": "#FABC3F",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 2,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false
-        }
+        "value_area": 800
       }
     },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 140,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 300,
-          "size": 7,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
       }
     },
-    "retina_detect": true
-  });
+    "opacity": {
+      "value": 0.5,
+      "random": false
+    },
+    "size": {
+      "value": 3,
+      "random": true
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "repulse": {
+        "distance": 100,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      }
+    }
+  },
+  "retina_detect": true
+});
 </script>
+
+<style>
+/* Make particles.js container full screen */
+#particles-js{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #000000;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* Streamlit main content adjustments */
+.stApp {
+  background: transparent;
+}
+
+</style>
 """
 
-# Embed the HTML into the Streamlit app
-components.html(neural_network_animation, height=0, width=0)
+# Inject the particles.js code into the Streamlit app
+st.markdown(particles_js, unsafe_allow_html=True)
 
-st.write("Particles are connected with lines, creating a neural network effect.")
+# Your Streamlit app content
+st.title("✨ Streamlit App with Particles Background ✨")
+st.write("""
+This is an example of a Streamlit app with a particles.js animation as the background.
+You can add any content here, and it will appear over the animated background.
+""")
+
+# Add more content as needed
+if st.button("Click Me"):
+    st.success("Button clicked!")
+
+st.text_input("Enter some text:")
+
+# Add a sidebar if needed
+with st.sidebar:
+    st.header("Sidebar Content")
+    st.write("This is the sidebar.")
+
