@@ -132,7 +132,7 @@ import streamlit.components.v1 as components
 
 st.title("Streamlit with Neural Network Style Animation")
 
-# HTML code for neural network style animation using particles.js
+# Simplified HTML and JavaScript for the neural network animation
 neural_network_animation = """
 <!DOCTYPE html>
 <html lang="en">
@@ -145,14 +145,12 @@ neural_network_animation = """
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #000;
   }
   #particles-js {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
   }
   </style>
 </head>
@@ -170,7 +168,7 @@ neural_network_animation = """
           }
         },
         "color": {
-          "value": "#00ff00"  # Set to green for a neural network effect
+          "value": "#00ff00"
         },
         "shape": {
           "type": "circle",
@@ -180,7 +178,7 @@ neural_network_animation = """
           }
         },
         "opacity": {
-          "value": 0.7,
+          "value": 0.5,
           "random": false
         },
         "size": {
@@ -190,9 +188,9 @@ neural_network_animation = """
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#00ff00",  # Same green color for the connecting lines
-          "opacity": 0.6,
-          "width": 2
+          "color": "#00ff00",
+          "opacity": 0.4,
+          "width": 1
         },
         "move": {
           "enable": true,
@@ -222,14 +220,14 @@ neural_network_animation = """
         },
         "modes": {
           "grab": {
-            "distance": 200,
+            "distance": 140,
             "line_linked": {
               "opacity": 1
             }
           },
           "bubble": {
             "distance": 400,
-            "size": 4,
+            "size": 5,
             "duration": 2,
             "opacity": 8,
             "speed": 3
@@ -253,8 +251,7 @@ neural_network_animation = """
 </html>
 """
 
-# Embedding the HTML into the Streamlit app
+# Embed the HTML into the Streamlit app
 components.html(neural_network_animation, height=600)
 
 st.write("Particles are connected with lines, creating a neural network effect.")
-
