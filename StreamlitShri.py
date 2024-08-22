@@ -137,7 +137,7 @@ def header_footer():
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img 
           src= 
-    "https://assets-global.website-files.com/5fac161927bf86485ba43fd0/6229d40f625c70840c12bcd7_BlogGif_2.gif" 
+    "https://allthatsinteresting.com/wordpress/wp-content/uploads/2014/02/3D-Gifs-Nightmare.gif" 
           alt="" width="150" 
           height="45"></a></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
