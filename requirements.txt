@@ -6,3 +6,4 @@ pyautogui==0.9.53
 winotify==1.1.0
 translate==3.6.1
 geopy==2.3.0
+pillow
