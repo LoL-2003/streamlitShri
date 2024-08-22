@@ -139,7 +139,7 @@ def header_footer():
           src= 
     "https://allthatsinteresting.com/wordpress/wp-content/uploads/2014/02/3D-Gifs-Nightmare.gif" 
           alt="" width="150" 
-          height="45"></a></a>
+          height="60"></a></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
