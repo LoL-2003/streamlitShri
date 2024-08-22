@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.title("Streamlit with Cursor Animation")
+st.title("Streamlit with Cursor Tracking Particles")
 
 # HTML code with cursor animation using particles.js
 cursor_animation = """
@@ -34,7 +34,7 @@ cursor_animation = """
     particlesJS("particles-js", {
       "particles": {
         "number": {
-          "value": 50,
+          "value": 100,
           "density": {
             "enable": true,
             "value_area": 800
@@ -51,25 +51,21 @@ cursor_animation = """
           }
         },
         "opacity": {
-          "value": 0.5,
-          "random": false
+          "value": 0.7,
+          "random": true
         },
         "size": {
-          "value": 5,
+          "value": 3,
           "random": true
         },
         "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
+          "enable": false
         },
         "move": {
           "enable": true,
-          "speed": 3,
+          "speed": 6,
           "direction": "none",
-          "random": true,
+          "random": false,
           "straight": false,
           "out_mode": "out",
           "bounce": false,
@@ -79,17 +75,40 @@ cursor_animation = """
         }
       },
       "interactivity": {
-        "detect_on": "canvas",
+        "detect_on": "window",
         "events": {
           "onhover": {
+            "enable": true,
+            "mode": "bubble"
+          },
+          "onclick": {
             "enable": true,
             "mode": "repulse"
           }
         },
         "modes": {
+          "grab": {
+            "distance": 200,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 250,
+            "size": 8,
+            "duration": 2,
+            "opacity": 0.8,
+            "speed": 3
+          },
           "repulse": {
-            "distance": 100,
+            "distance": 400,
             "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
           }
         }
       },
@@ -100,7 +119,7 @@ cursor_animation = """
 </html>
 """
 
-# Embedding the HTML into Streamlit app
-components.html(cursor_animation, height=300)
+# Embedding the HTML into the Streamlit app
+components.html(cursor_animation, height=600)
 
-st.write("This is an example of adding a cursor animation in Streamlit!")
+st.write("Particles follow the cursor on hover and react on click.")
