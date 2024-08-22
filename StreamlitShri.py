@@ -133,7 +133,7 @@ import streamlit.components.v1 as components
 def header_footer():
     st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
     st.markdown("""
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #3498DB;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #00ff21;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img 
           src= 
