@@ -214,7 +214,7 @@ neural_network_animation = """
           }
         },
         "color": {
-          "value": "#912BBC"
+          "value": "#FABC3F"
         },
         "shape": {
           "type": "circle",
@@ -234,7 +234,7 @@ neural_network_animation = """
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#912BBC",
+          "color": "#FABC3F",
           "opacity": 0.4,
           "width": 1
         },
