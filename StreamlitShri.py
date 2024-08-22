@@ -145,13 +145,13 @@ def header_footer():
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item" style="color:black;">
               <a class="nav-link" href="https://www.linkedin.com/in/adityapuri10/">Contact Us</a>
             </li>
-            <li class="nav-item" style="color:"black">
+            <li class="nav-item" style="color:black;">
               <a class="nav-link" href="https://github.com/Adi1042003">GitHub</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="color:black;">
               <a class="nav-link" href="https://drive.google.com/file/d/1lH_kcpl4t9HbF6uWTAc8PR431c1DzIAl/view?usp=sharing">About Project</a>
             </li>
           </ul>
