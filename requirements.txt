@@ -2,7 +2,13 @@ streamlit==1.26.0
 pyttsx3==2.90
 SpeechRecognition==3.10.0
 wikipedia==1.4.0
-pywhatkit==5.4
+webbrowser
+smtplib
+pyautogui==0.9.53
 winotify==1.1.0
 translate==3.6.1
 geopy==2.3.0
+random
+datetime
+os
+time
