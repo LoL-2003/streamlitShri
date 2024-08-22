@@ -348,14 +348,6 @@ def header_footer():
         .stApp {
             background: transparent !important;
         }
-        /* Optional: styling content area */
-        .st-emotion-cache-cio0dv {
-            padding-left: 20%;
-            padding-right: 1rem;
-            background: rgba(255, 255, 255, 0.8); /* semi-transparent background */
-            border-radius: 10px; /* rounded corners */
-            padding: 20px;
-        }
     </style>
     """, unsafe_allow_html=True)
 
@@ -385,7 +377,7 @@ neural_network_animation = """
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: #000; /* Fallback color */
+    background-color: #000;
   }
   .stApp {
     position: relative;
