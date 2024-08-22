@@ -176,7 +176,7 @@ def header_footer():
 st.set_page_config(page_title="ADITYA")
 header_footer()
 
-st.title("Streamlit with Neural Network Style Animation")
+st.title("Streamlit with Neural Network Style Animation Move/Click using Cursor in the Below space")
 
 # Simplified HTML and JavaScript for the neural network animation
 neural_network_animation = """
