@@ -148,7 +148,7 @@ def header_footer():
             <li class="nav-item">
               <a class="nav-link" href="https://www.linkedin.com/in/adityapuri10/">Contact Us</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="color:"black">
               <a class="nav-link" href="https://github.com/Adi1042003">GitHub</a>
             </li>
             <li class="nav-item">
@@ -272,8 +272,8 @@ neural_network_animation = """
             }
           },
           "bubble": {
-            "distance": 400,
-            "size": 5,
+            "distance": 300,
+            "size": 7,
             "duration": 2,
             "opacity": 8,
             "speed": 3
